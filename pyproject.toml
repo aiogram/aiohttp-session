@@ -7,18 +7,21 @@ authors = ["mpa <mpa@snejugal.ru>"]
 [tool.poetry.dependencies]
 python = "^3.7"
 aiogram = {git = "https://github.com/aiogram/aiogram.git", rev = "dev-3.x"}
+aiohttp = "^3.6.2"
+aiohttp-socks = {version = "^0.3.9", optional = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+isort = "^4.3.21"
+mypy = "^0.770"
+black = "^19.10b0"
 aresponses = "^2.0.0"
 pytest-asyncio = "^0.12.0"
 flake8 = "^3.8.1"
 pytest-cov = "^2.8.1"
 
-[tool.poetry.dev-dependencies]
-pytest = "^5.2"
-aiohttp = "^3.6.2"
-aiohttp-socks = "^0.3.9"
-isort = "^4.3.21"
-mypy = "^0.770"
-black = "^19.10b0"
+[tool.poetry.extras]
+proxy = ["aiohttp-socks"]
 
 [tool.black]
 line-length = 99
