@@ -80,7 +80,7 @@ Example of chain proxies:
 .. code-block:: python
 
     from aiohttp import BasicAuth
-    from aiogram.api.client.session.aiohttp import AiohttpSession
+    from aiogram_aiohttp_session import AiohttpSession
 
     auth = BasicAuth(login="user", password="password")
     session = AiohttpSession(
